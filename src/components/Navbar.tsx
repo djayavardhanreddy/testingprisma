@@ -10,6 +10,7 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Doctors', href: '/doctors' },
+    {name:'Location',href:'/location'},
     { name: 'Schedule Appointment', href: '/appointment' },
   ];
 
@@ -21,10 +22,11 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-blue-600 p-2 rounded-full">
-                <Heart className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">MediCare Hospital</span>
+              <img style={{
+                width:'40px',
+                height:'40px'
+              }} src='\src\assets\laksshmi.jpg' alt="logo"></img>
+              <span className="text-xl font-bold text-gray-900">Lakshmi Sai Hospital</span>
             </Link>
           </div>
 

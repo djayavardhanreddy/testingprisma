@@ -1,4 +1,3 @@
-import React from 'react';
 import { Heart, Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
@@ -12,7 +11,7 @@ const Footer = () => {
               <div className="bg-blue-600 p-2 rounded-full">
                 <Heart className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold">MediCare Hospital</span>
+              <span className="text-xl font-bold">Lakshmi Sai Hospitals</span>
             </div>
             <p className="text-gray-400 mb-4">
               Providing exceptional healthcare services with compassion, innovation, and excellence. 
@@ -26,15 +25,15 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">08518232777</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400">info@medicare.com</span>
+                <span className="text-gray-400">lakshmisai@medicare.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-400">123 Medical Center Dr, Healthcare City</span>
+                <span className="text-gray-400">Gayathree Estates, Deva Nagar, Kurnool, Andhra Pradesh 518002</span>
               </div>
             </div>
           </div>
@@ -51,7 +50,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 MediCare Hospital. All rights reserved. | Providing quality healthcare since 1985.
+            © 2024 Lakshmi Sai Hospital. All rights reserved. | Providing quality healthcare since 2017.
           </p>
         </div>
       </div>

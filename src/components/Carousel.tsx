@@ -1,48 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface CarouselSlide {
   id: number;
-  image: string;
-  title: string;
-  description: string;
+  image_url: string;
+  title?: string;
+  text: string;
 }
 
 const Carousel = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = React.useState(0);
 
-  const slides: CarouselSlide[] = [
-    {
-      id: 1,
-      image: 'https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Advanced Medical Technology',
-      description: 'State-of-the-art equipment and cutting-edge medical technology for accurate diagnosis and treatment.'
-    },
-    {
-      id: 2,
-      image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Expert Medical Team',
-      description: 'Our experienced doctors and nurses provide compassionate care with the highest medical standards.'
-    },
-    {
-      id: 3,
-      image: 'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Emergency Care 24/7',
-      description: 'Round-the-clock emergency services with rapid response times and immediate medical attention.'
-    },
-    {
-      id: 4,
-      image: 'https://images.pexels.com/photos/8376315/pexels-photo-8376315.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Modern Facilities',
-      description: 'Comfortable patient rooms and modern facilities designed for optimal healing and recovery.'
-    },
-    {
-      id: 5,
-      image: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-      title: 'Specialized Departments',
-      description: 'Comprehensive medical departments including cardiology, neurology, pediatrics, and more.'
-    }
-  ];
+ const slides: CarouselSlide[] = [
+  {
+    id: 1,
+    title: "The Art of Healing",
+    text: "The good physician treats the disease; the great physician treats the patient who has the disease",
+    image_url: "https://img.freepik.com/free-photo/doctor-doing-cosmetology-process_624325-1515.jpg?t=st=1724572277~exp=1724575877~hmac=10e7c95a8227946ea267e619df6bd713e2da1d62a4c09383a03c9f204b16704b&w=740",
+  },
+  {
+    id: 1,
+    title: "Compassion in Medicine",
+    text: "The good physician treats the disease; the great physician treats the patient who has the disease",
+    image_url: "https://img.freepik.com/free-psd/brain-study-background-psd-mental-health-care-medical-technology_53876-123320.jpg?t=st=1724572725~exp=1724576325~hmac=687b776e42f8b2f3df0e9612417ae432391cd96c5d16f25c9173cacc9109cfd0&w=740",
+  },
+  {
+    id: 2,
+    title: "Pride in the White Coat",
+    text: "Wear the white coat with dignity and pride, it is an honor and privilege to get to serve the public as a physician.",
+    image_url: "https://img.freepik.com/premium-photo/collage-medical-issue-with-blood-stool_23-2150942845.jpg?w=740",
+  },
+  {
+    id: 3,
+    title: "The Power of Words",
+    text: "As doctors, we are not trained to communicate and understand the power of our words as it is related to patient’s ability and desire to survive” – Bernie Siegel",
+    image_url: "https://img.freepik.com/premium-vector/pregnant-woman-consult-pregnancy-with-doctor-consultation-check-up-pregnancy-concept_338371-1491.jpg?w=826",
+  },
+];
+;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -56,7 +51,7 @@ const Carousel = () => {
     setCurrentSlide(index);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -72,14 +67,14 @@ const Carousel = () => {
           }`}
         >
           <img
-            src={slide.image}
+            src={slide.image_url}
             alt={slide.title}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
             <div className="text-center text-white px-4 max-w-4xl">
               <h2 className="text-3xl md:text-5xl font-bold mb-4">{slide.title}</h2>
-              <p className="text-lg md:text-xl opacity-90">{slide.description}</p>
+              <p className="text-lg md:text-xl opacity-90">{slide.text}</p>
             </div>
           </div>
         </div>

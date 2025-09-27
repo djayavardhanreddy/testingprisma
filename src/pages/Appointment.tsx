@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, User, Phone, Mail, FileText, CheckCircle } from 'lucide-react';
 import { apiPost, apiGet } from '../hooks/useApi';
-import type { AppointmentFormData } from '../types';
 
 const Appointment = () => {
   const [formData, setFormData] = useState({
@@ -436,7 +435,7 @@ const Appointment = () => {
             <div className="text-center p-6 bg-gray-50 rounded-lg">
               <Phone className="h-12 w-12 text-blue-600 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
-              <p className="text-gray-600">+1 (555) 123-4567</p>
+              <p className="text-gray-600">08518232777</p>
               <p className="text-sm text-gray-500">Monday - Friday: 8 AM - 8 PM</p>
             </div>
 

@@ -15,7 +15,7 @@ const Home = () => {
     {
       icon: Users,
       title: 'Expert Medical Team',
-      description: 'Over 200 specialized doctors and healthcare professionals.'
+      description: 'Over 20s specialized doctors and healthcare professionals.'
     },
     {
       icon: Clock,
@@ -59,6 +59,34 @@ const Home = () => {
     'Diagnostic Imaging'
   ];
 
+  const specialities = [{
+    image_path: 'https://img.freepik.com/premium-vector/pregnant-woman-future-mom-standing-nature-hugging-belly-with-arms-flat-vector-illustration_717949-78.jpg?w=740',
+    text: 'PREGNANCY CARE',
+    href: 'gynaecology'
+
+
+  }, {
+    image_path: 'https://img.freepik.com/free-vector/cartoon-gynecology-consultation-illustrated_23-2148676593.jpg?t=st=1725042958~exp=1725046558~hmac=4b7688a9a48d59b070bf4eebada10699aa091abf289387918f5c649535cc4240&w=740',
+    text: 'GYNAECOLOGY',
+    href: 'gynaecology'
+
+  }, {
+    image_path: 'https://img.freepik.com/free-vector/ai-use-healthcare-abstract-concept-illustration_335657-3789.jpg?t=st=1725042582~exp=1725046182~hmac=60e7000d17073f5687f4ffb3a13bc0de10af0a5419c9e7dc8fee645ec2747a1c&w=740',
+    text: 'CARDIOLOGY',
+    href: '/cardiology'
+  }, {
+    image_path: 'https://img.freepik.com/free-vector/flat-hand-drawn-microblading-concept_23-2148826280.jpg?t=st=1725042792~exp=1725046392~hmac=33a3d361a438b5f26f363ebb754024586106ae94777370e7c374cde4dd9263d4&w=740',
+    text: 'DERMATOLOGY',
+    href: 'dermatology'
+
+  }, {
+    image_path: 'https://www.freepik.com/free-vector/gradient-gut-health-illustration_58420840.htm#fromView=search&page=1&position=27&uuid=1950f3d7-b825-426f-94ee-37c2a1e80d10&query=gastroenterology+free',
+    text: 'GASTROLOGY',
+    href: 'gastroenterology'
+  }
+
+]
+
   return (
     <div>
       {/* Hero Carousel */}
@@ -69,7 +97,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose MediCare Hospital?
+              Why Lakshmi Sai Hospital?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We are committed to providing exceptional healthcare services with a patient-centered approach, 
@@ -87,6 +115,33 @@ const Home = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{highlight.title}</h3>
                   <p className="text-gray-600">{highlight.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+       <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+             OUR SPECIALITIES
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We are committed to providing exceptional healthcare services with a patient-centered approach, 
+              advanced medical technology, and compassionate care.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            {specialities.map((highlight, index) => {
+              return (
+                <div key={index} className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img src={highlight?.image_path}/>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{highlight.text}</h3>
+                  <p className="text-gray-600">{highlight.href}</p>
                 </div>
               );
             })}

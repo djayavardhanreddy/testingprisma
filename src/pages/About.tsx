@@ -3,10 +3,10 @@ import { Award, Heart, Users, Building } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Users, number: '200+', label: 'Medical Professionals' },
-    { icon: Heart, number: '50,000+', label: 'Patients Treated Annually' },
-    { icon: Award, number: '25+', label: 'Years of Excellence' },
-    { icon: Building, number: '15', label: 'Specialized Departments' }
+    { icon: Users, number: '20+', label: 'Medical Professionals' },
+    { icon: Heart, number: '5000+', label: 'Patients Treated Annually' },
+    { icon: Award, number: '10+', label: 'Years of Excellence' },
+    { icon: Building, number: '8', label: 'Specialized Departments' }
   ];
 
   const values = [
@@ -34,9 +34,9 @@ const About = () => {
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">About MediCare Hospital</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Lakshmi Sai Hospital</h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Committed to excellence in healthcare for over 25 years, providing compassionate care 
+              Committed to excellence in healthcare for over 10 years, providing compassionate care 
               with state-of-the-art medical technology and expertise.
             </p>
           </div>
@@ -104,7 +104,7 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-4 text-lg text-gray-600">
                 <p>
-                  MediCare Hospital was founded in 1998 with a simple yet powerful vision: 
+                 Lakshmi Sai Hospital was founded in 2017 with a simple yet powerful vision: 
                   to provide world-class healthcare services to our community with compassion 
                   and excellence at our core.
                 </p>
