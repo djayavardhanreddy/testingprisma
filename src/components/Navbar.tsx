@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import myImage from '../assets/laksshmi.jpg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
               <img style={{
                 width:'40px',
                 height:'40px'
-              }} src='\src\assets\laksshmi.jpg' alt="logo"></img>
+              }} src={myImage} alt="logo"></img>
               <span className="text-xl font-bold text-gray-900">Lakshmi Sai Hospital</span>
             </Link>
           </div>
