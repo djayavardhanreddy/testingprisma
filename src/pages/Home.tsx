@@ -50,13 +50,11 @@ const Home = () => {
 
   const services = [
     'Cardiology & Heart Surgery',
-    'Neurology & Brain Surgery', 
-    'Oncology & Cancer Treatment',
     'Pediatrics & Child Care',
-    'Orthopedics & Joint Replacement',
-    'Emergency & Trauma Care',
     'Maternity & Women\'s Health',
-    'Diagnostic Imaging'
+    'Diagnostic Imaging',
+    'Dermatology & Skin care',
+    'Gastrology & EndoScope'
   ];
 
   const specialities = [{
@@ -211,14 +209,18 @@ const Home = () => {
             
             <div className="flex items-center space-x-2 text-blue-100">
               <Phone className="h-5 w-5" />
-              <span>Or call: +1 (555) 123-4567</span>
+              <span>Or call: 08518232777</span>
             </div>
           </div>
-
+ <Link
+              to="/location"
+              // className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            >
           <div className="mt-8 flex items-center justify-center space-x-2 text-blue-100">
             <MapPin className="h-5 w-5" />
-            <span>123 Medical Center Dr, Healthcare City</span>
+            <span>Gayathree Estates, Deva Nagar, Kurnool, Andhra Pradesh 518002</span>
           </div>
+          </Link>
         </div>
       </section>
     </div>
